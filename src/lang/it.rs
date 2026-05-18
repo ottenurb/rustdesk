@@ -394,7 +394,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("One-time Password", "Password monouso"),
         ("Use one-time password", "Usa password monouso"),
         ("One-time password length", "Lunghezza password monouso"),
-        ("Request access to your device", "Richiedi accesso al dispositivo"),
+        ("Request access to your device", "Richiede accesso al dispositivo. Accettando, audio e video della sessione potrebbero essere registrati"),
         ("Hide connection management window", "Nascondi la finestra di gestione delle connessioni"),
         ("hide_cm_tip", "Permetti di nascondere solo se si accettano sessioni con password permanente"),
         ("wayland_experiment_tip", "Il supporto Wayland è in fase sperimentale, se vuoi un accesso stabile usa X11."),
