@@ -265,6 +265,14 @@ jobs:
           mv ./Package/bin/x64/Release/en-us/Package.msi ../../SignOutput/rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.msi
           sha256sum ../../SignOutput/rustdesk-*.msi
 
+      - name: Upload MSI artifact (fallback)
+        if: env.UPLOAD_ARTIFACT == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rustdesk-msi-${{ matrix.job.arch }}
+          path: SignOutput/*.msi
+          if-no-files-found: error
+
       - name: Sign rustdesk self-extracted file
         if: env.UPLOAD_ARTIFACT == 'true' && env.SIGN_BASE_URL != '-2'
         shell: bash
